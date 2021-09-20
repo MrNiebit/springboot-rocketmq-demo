@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: rocketmq-producer
+
+rocketmq:
+  name-server: 192.168.166.20:9876;192.168.166.206:9876
+  producer:
+    group: test-group
