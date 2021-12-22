@@ -1,5 +1,6 @@
 package cn.lacknb.consumer;
 
+import org.apache.rocketmq.spring.annotation.MessageModel;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Component;
  * @date: 2021/9/20 4:35 下午
  **/
 @Component
-@RocketMQMessageListener(topic = "${test.topic}", consumerGroup = "${test.group}")
+// 广播模式
+@RocketMQMessageListener(topic = "${test.topic}", consumerGroup = "${test.group}", messageModel = MessageModel.BROADCASTING)
 public class Test2Consumer implements RocketMQListener<String> {
 
     @Value("${test.group}")
