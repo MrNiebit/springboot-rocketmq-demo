@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 @RocketMQMessageListener(topic = "${test.topic}", consumerGroup = "${test.group}")
-public class TestConsumer implements RocketMQListener<String> {
+public class Test2Consumer implements RocketMQListener<String> {
 
     @Value("${test.group}")
     private String groupName;
 
     @Override
     public void onMessage(String body) {
-        System.out.println("first node 收到消息：" + body + " ->> groupName: " + groupName);
+        System.out.println("second node 收到消息：" + body + " ->> groupName: " + groupName);
     }
 }

@@ -6,6 +6,6 @@ spring:
     name: rocketmq-producer
 
 rocketmq:
-  name-server: 192.168.166.20:9876;192.168.166.206:9876
+  name-server: 192.168.2.35:9876;192.168.2.181:9876
   producer:
     group: test-group
