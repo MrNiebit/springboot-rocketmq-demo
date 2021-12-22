@@ -11,3 +11,4 @@ springboot 集成 rocketmq
 
 # 延伸阅读
 
+rocketmq 阿里云文档：https://help.aliyun.com/document_detail/95837.html
